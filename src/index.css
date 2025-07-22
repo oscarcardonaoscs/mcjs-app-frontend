@@ -1,0 +1,28 @@
+/* 1) Forzar html/body/root al 100% de alto y ancho */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* 2) El wrapper será full height */
+#wrapper {
+  display: flex;
+  height: 100%;
+}
+
+/* 3) Sidebar siempre 250px (SB-Admin ya lo aplica) y el content-wrapper ocupa flex restante */
+#content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0; /* para evitar overflow */
+}
+
+/* 4) El main crece y hace scroll interno si excede */
+main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem; /* opcional */
+}
